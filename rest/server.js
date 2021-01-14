@@ -1,4 +1,3 @@
-const { json } = require('express');
 var express = require('express');
 var app = express();
 
@@ -29,7 +28,6 @@ app.get('/:type/:expression', function (req, res) {
     });
 });
 
-// console.log("// this is going to host the api of JIT compiler %s")
 var server = app.listen(8104, function () {
     var host = server.address().address
     var port = server.address().port
