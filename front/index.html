@@ -165,7 +165,6 @@
         if (is_valid) {
             $(".alert").css("display", "none");
             $(".details-container").css("display", "block");
-            //$("#result-container").html("= " + parseInt(eval(expression)));
             expression = btoa(expression);
             $.get("/api/tokens/" + expression, function (tokens) {
                 tokens = tokens.split("\n");
