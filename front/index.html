@@ -41,14 +41,15 @@
             Our compiler has the following phases:
         </p>
         <ol>
-            <li>Lexical analysis using our <a href="javascript:;"
-                    onclick="open_url('aHR0cHM6Ly9naXRodWIuY29tL21pbGFkZmFyY2EvYXJpdGgtY29tcGlsZXIvYmxvYi9tYXN0ZXIvc3JjL3BhcnNlci5j')">grammar</a>.
-                Parse the input using a <a href="https://en.wikipedia.org/wiki/Recursive_descent_parser"
+            <li>We will start with Lexical Analysis. Input will be turned into tokens, then we will parse them to make
+                sure they are syntactically correct.</li>
+            <li>Parse the tokens with a <a href="https://en.wikipedia.org/wiki/Recursive_descent_parser"
                     target="_blank">Recursive Decent</a>
-                parser and break them into <a href="https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols"
-                    target="_blank">Terminal
-                    Symbols</a>.</li>
-            <li>Take the tokens and create an Abstract Syntax Tree (AST).</li>
+                parser given our <a href="javascript:;"
+                    onclick="open_url('aHR0cHM6Ly9naXRodWIuY29tL21pbGFkZmFyY2EvYXJpdGgtY29tcGlsZXIvYmxvYi9tYXN0ZXIvc3JjL3BhcnNlci5j')">context-free
+                    grammar</a> and create an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"
+                    target="_blank">Abstract Syntax Tree
+                    (AST)</a>.</li>
             <li>Reserve an executable memory location for holding machine instructions.</li>
             <li>Register allocation and Target Code Generation. Traverse the AST using <a
                     href="https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search_of_binary_tree"
