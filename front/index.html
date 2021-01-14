@@ -155,6 +155,7 @@
     var execute = function () {
         var expression = $("#expression").val().trim();
         var is_valid = false;
+        // make sure input is valid
         try {
             is_valid = !isNaN(eval(expression));
         } catch (e) { }
