@@ -1,0 +1,7 @@
+{
+    "name": "JIT",
+    "main": "",
+    "dependencies": {
+        "express": "latest"
+    }
+}

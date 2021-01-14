@@ -1,0 +1,24 @@
+/* helpers */
+.gray-bg{
+    background-color: #f8f9fa !important;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.m-t-20{
+    margin-top: 20px;
+}
+.p-l-10 {
+    padding-left: 10px;
+}
+.m-w-500{
+    max-width: 500px;
+}
+
+/* page */
+.alert{
+    display: none;
+}
+.details-container{
+    display: none;
+}
