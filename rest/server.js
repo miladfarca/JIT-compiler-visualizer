@@ -20,7 +20,7 @@ app.get('/:type/:expression', function (req, res) {
         flags = "--print-code --no-output";
     }
     var expression = Buffer.from(req.params.expression, 'base64').toString();
-    exec('../arith-compiler/calc ' + flags + ' --inline "' + expression + "\"", (err, stdout, stderr) => {
+    exec('../arith-compiler/calc ' + flags + ' --inline "' + expression + "\"", function (err, stdout, stderr) {
         if (err) {
             return res.sendStatus(400);
         } else {
@@ -30,7 +30,7 @@ app.get('/:type/:expression', function (req, res) {
 });
 
 // console.log("// this is going to host the api of JIT compiler %s")
-var server = app.listen(8100, function () {
+var server = app.listen(8104, function () {
     var host = server.address().address
     var port = server.address().port
     console.log("Listening at http://%s:%s", host, port)
