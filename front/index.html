@@ -88,9 +88,8 @@
             <div class="py-1 bg-light p-l-10" id="tokens-container"></div>
 
             <h5 class="m-t-20">Abstract Syntax Tree (AST)</h5>
-            <p>Our AST is a <a href="https://en.wikipedia.org/wiki/Binary_tree" target="_blank">Binary Tree</a>. It will
-                be
-                recursively traversed from left to right. Each interior node represents an operator. The children of the
+            <p>Our AST is a <a href="https://en.wikipedia.org/wiki/Binary_tree" target="_blank">Binary Tree</a>. Each
+                interior node represents an operator. The children of the
                 node represent the operands of the operator.</p>
             <div class="py-1 bg-light">
                 <!-- graph -->
@@ -107,7 +106,10 @@
         </pre>
 
             <h5 class="m-t-20">Generated Instructions on x64</h5>
-            <p>Instructions need to be encoded using the <a
+            <p>We will traverse our AST from left to right. Visiting each node will emit a machine instruction. If node
+                contains a value an instruction will load it into a register, else it will be an operator and
+                instructions will be emitted to operate on its input values. Instructions need to be encoded
+                using the <a
                     href="https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf"
                     target="_blank">x64 ISA</a>. As an example <span class="badge badge-secondary">Floating Point Add
                     (ADDSS)</span> is encoded as <span class="badge badge-secondary">0xf3 0x0f 0x5c destination
