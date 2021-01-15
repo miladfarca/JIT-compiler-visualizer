@@ -161,6 +161,10 @@
         try {
             is_valid = !isNaN(eval(expression));
         } catch (e) { }
+        // cannot start with +
+        if (expression.lastIndexOf("+", 0) === 0) {
+            is_valid = false;
+        }
         // no decimals
         if (expression.indexOf(".") != -1) {
             is_valid = false;
